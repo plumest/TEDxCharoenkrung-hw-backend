@@ -22,4 +22,8 @@ io.on('connection', (socket) => {
     socket.on('task', task => {
         io.sockets.emit('task', task);
     });
+
+    socket.on('drag', collection => {
+        io.sockets.emit('drag', collection);
+    });
 });
