@@ -17,5 +17,9 @@ io.on('connection', (socket) => {
 
     socket.on('collection', data => {
         io.sockets.emit('collection', data);
-    })
+    });
+
+    socket.on('task', task => {
+        io.sockets.emit('task', task);
+    });
 });
